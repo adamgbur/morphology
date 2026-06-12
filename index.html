@@ -68,9 +68,10 @@
      or white flash: the outgoing slide animates from neutral to its exit
      state while the incoming animates from its enter state to neutral, both
      fully on-screen for the whole duration.
-       x-*  = exit target state (outgoing slide animates TO this)
-       n-*  = enter start state (incoming slide animates FROM this to neutral)
-  ═══════════════════════════════════════════ */
+       x-* = exit target state (outgoing slide animates TO this)
+       n-* = enter start state (incoming slide animates FROM this to neutral)
+   warmth, contrast, and fluidity.
+   ═══════════════════════════════════════════ */
   /* exit target states */
   .slide.x-scaleup    { opacity: 0; transform: scale(1.08);  z-index: 1; }
   .slide.x-scaleup11  { opacity: 0; transform: scale(1.1);   z-index: 1; }
@@ -120,7 +121,7 @@
     display: none;
   }
 
-  /* ── Navigation — arrows + counter hidden, dots kept ── */
+  /* ── Navigation ── */
   #nav {
     display: none;
   }
@@ -170,7 +171,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 1 — TITLE
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s1 {
     background: #fff;
     flex-direction: row;
@@ -272,7 +273,6 @@
     overflow: hidden;
   }
 
-  /* Big faded background decoration */
   .s1-right-deco {
     position: absolute;
     inset: 0;
@@ -477,7 +477,7 @@
 
   /* ═══════════════════════════════════════════
      SHARED — content slides
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   .content-slide {
     background: #fff;
     padding: 48px 52px 44px;
@@ -522,7 +522,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 2 — VÝCHODISKÁ
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s2 { background: #f4f4f4; }
 
   /* Header */
@@ -722,8 +722,6 @@
 
   .s2-card--dark .s2-card-lead { color: rgba(255,255,255,0.38); }
 
-  .s2-card--timeline .s2-section-label { color: #888; }
-
   /* Decorative starburst graphic */
   .s2-pulse-wrap {
     position: absolute;
@@ -823,9 +821,7 @@
   }
 
 
-  /* ═══════════════════════════════════════════
-     SLIDES 3 & 4 — GIF SHOWCASE
-  ═══════════════════════════════════════════ */
+  /* ── SLIDES 3 & 4 — GIF SHOWCASE ── */
   .sgif {
     overflow: hidden;
     background: #0a0a0a;
@@ -912,7 +908,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 5 — POPULATION
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s3 {
     background: #f4f4f4;
     flex-direction: row;
@@ -1103,9 +1099,7 @@
     line-height: 1.5;
   }
 
-  /* ═══════════════════════════════════════════
-     SLIDE 4 — IMAGE FULL BLEED
-  ═══════════════════════════════════════════ */
+  /* ── SLIDE 4 — IMAGE FULL BLEED ── */
   #s4 {
     background: #000;
   }
@@ -1141,9 +1135,7 @@
     text-shadow: 0 1px 8px rgba(0,0,0,0.9);
   }
 
-  /* ═══════════════════════════════════════════
-     SLIDE (s5) — METHODOLOGY
-  ═══════════════════════════════════════════ */
+  /* ── SLIDE (s5) — METHODOLOGY ── */
   #s5 {
     background: #fff;
     flex-direction: column;
@@ -1386,7 +1378,6 @@
   }
 
   /* Phase 03 - Likert scale */
-  /* Likert scale — redesigned with animated track */
   .s5-lik {
     flex: 1;
     display: flex;
@@ -1558,7 +1549,7 @@
     color: rgba(255,255,255,0.3);
   }
 
-  /* Stats footer - pinned to bottom of slide */
+  /* Stats footer */
   .s5-bottom-row {
     position: absolute;
     bottom: 0; left: 0; right: 0;
@@ -1602,8 +1593,8 @@
   }
 
   /* ═══════════════════════════════════════════
-     SLIDE 6 — RESULTS TEST (vertical bar charts)
-  ═══════════════════════════════════════════ */
+     SLIDE 6 — RESULTS TEST
+   ═══════════════════════════════════════════ */
   #s6 {
     background: #ebebeb;
     flex-direction: column;
@@ -1611,7 +1602,6 @@
     overflow: hidden;
   }
 
-  /* Red top accent bar */
   #s6::before {
     content: '';
     position: absolute;
@@ -1622,7 +1612,6 @@
     pointer-events: none;
   }
 
-  /* Ghost decorative element */
   #s6::after {
     content: '%';
     position: absolute;
@@ -1637,7 +1626,6 @@
     letter-spacing: -0.04em;
   }
 
-  /* Decorative ring — bottom-left */
   .s6-ring {
     position: absolute;
     bottom: -160px;
@@ -1650,7 +1638,6 @@
     z-index: 0;
   }
 
-  /* Inner ring offset */
   .s6-ring::after {
     content: '';
     position: absolute;
@@ -1659,7 +1646,6 @@
     border: 18px solid rgba(223,10,26,0.06);
   }
 
-  /* Dot matrix — top-right area */
   .s6-dots {
     position: absolute;
     top: 80px;
@@ -1936,7 +1922,7 @@
 
   .s6-col.win ~ .s6-xlabel { color: var(--red); }
 
-  /* footer of each chart: p-value + interpretation */
+  /* footer of each chart */
   .s6-foot {
     display: flex;
     align-items: center;
@@ -1989,8 +1975,8 @@
   .s6-chart.win .s6-interp strong { color: var(--red); }
 
   /* ═══════════════════════════════════════════
-     SLIDE 7 — QUESTIONNAIRE (light cards)
-  ═══════════════════════════════════════════ */
+     SLIDE 7 — QUESTIONNAIRE
+   ═══════════════════════════════════════════ */
   #s7 {
     background: #eaeaea;
     flex-direction: column;
@@ -1998,7 +1984,6 @@
     overflow: hidden;
   }
 
-  /* Red top accent bar */
   #s7::before {
     content: '';
     position: absolute;
@@ -2009,7 +1994,6 @@
     pointer-events: none;
   }
 
-  /* Ghost large letter background */
   #s7::after {
     content: 'n';
     position: absolute;
@@ -2024,7 +2008,6 @@
     letter-spacing: -0.06em;
   }
 
-  /* Decorative ring — top-right */
   .s7-ring {
     position: absolute;
     top: -130px;
@@ -2037,7 +2020,6 @@
     z-index: 0;
   }
 
-  /* Dot matrix — bottom-left */
   .s7-dots {
     position: absolute;
     bottom: 96px;
@@ -2184,7 +2166,7 @@
 
   .s7-scale.sig-scale .s7-ghost { color: rgba(217,119,6,0.14); }
 
-  /* Significant scales — amber pre-reveal state */
+  /* Significant scales */
   .s7-scale.sig-scale {
     background: #fffbf2;
     border: 1px solid rgba(217,119,6,0.22);
@@ -2302,7 +2284,7 @@
 
   .s7-score-row.winner .s7-score-num { color: var(--red); }
 
-  /* S7 Likert strip — top section between header and grid */
+  /* S7 Likert strip */
   .s7-lik-header {
     padding: 0 52px 8px;
     flex-shrink: 0;
@@ -2334,7 +2316,7 @@
     pointer-events: all;
   }
 
-  /* S7 bottom — full-width conclusion only */
+  /* S7 bottom */
   .s7-bottom {
     padding: 0 52px 12px;
     flex-shrink: 0;
@@ -2447,7 +2429,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 8 — STUDENTS WANT TECH
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s8 {
     background: #f5f5f5;
     flex-direction: row;
@@ -2741,7 +2723,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 9 — ZÁVER (DARK)
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s9 {
     background: var(--black);
     flex-direction: column;
@@ -2843,7 +2825,7 @@
   .s9-title .red { color: var(--red); }
   .s9-title .muted { color: rgba(255,255,255,0.5); }
 
-  /* big statement - line-by-line animation */
+  /* big statement */
   .s9-big-statement {
     border-left: 3px solid var(--red);
     padding-left: 20px;
@@ -2898,7 +2880,7 @@
     margin-bottom: 4px;
   }
 
-  /* rank cards — base */
+  /* rank cards */
   .s9-rank {
     display: flex;
     align-items: stretch;
@@ -2925,7 +2907,6 @@
     border-color: rgba(120,140,160,0.15);
   }
 
-  /* reveal animations — distinct per place */
   @keyframes s9R1In {
     0%   { opacity: 0; transform: translateX(70px) scale(0.96); }
     65%  { opacity: 1; transform: translateX(-6px) scale(1.02); }
@@ -2955,14 +2936,14 @@
     pointer-events: all;
   }
 
-  /* idle pulse on 1st place after reveal */
+  /* idle pulse on 1st place */
   @keyframes s9R1Pulse {
     0%, 100% { box-shadow: 0 0 0 0 rgba(223,10,26,0); }
     50%       { box-shadow: 0 0 0 6px rgba(223,10,26,0.12); }
   }
   .s9-rank.rank-1.revealed {
     animation: s9R1In 0.75s cubic-bezier(0.34,1.2,0.64,1) forwards,
-               s9R1Pulse 3s ease-in-out 1s infinite;
+                s9R1Pulse 3s ease-in-out 1s infinite;
   }
 
   /* medal badge */
@@ -3078,7 +3059,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 10 — CTA
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s10 {
     background: #0c0c0d;
     overflow: hidden;
@@ -3117,7 +3098,7 @@
     to   { transform: scale(1); }
   }
 
-  /* gradient overlay — dark left, transparent right */
+  /* gradient overlay */
   .s10-overlay {
     position: absolute;
     inset: 0;
@@ -3132,7 +3113,6 @@
     pointer-events: none;
   }
 
-  /* decorative ring top-left */
   .s10-ring {
     position: absolute;
     top: -140px; left: -140px;
@@ -3145,7 +3125,6 @@
     border: 1px solid rgba(223,10,26,0.09);
   }
 
-  /* dot grid bottom-right */
   .s10-dots {
     position: absolute;
     bottom: 72px; right: 80px;
@@ -3155,7 +3134,6 @@
     z-index: 2; pointer-events: none;
   }
 
-  /* growing red bar at bottom */
   .s10-bar {
     position: absolute;
     bottom: 0; left: 0;
@@ -3217,7 +3195,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDES t1 / t2 — ANATOMICKÝ TURNAJ
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   .s-turnaj {
     background: #0c0c0d;
     overflow: hidden;
@@ -3245,7 +3223,6 @@
     to   { transform: scale(1); }
   }
 
-  /* bottom-heavy gradient — keeps photo visible on top */
   .s-turnaj-overlay {
     position: absolute;
     inset: 0;
@@ -3316,7 +3293,6 @@
   }
   .slide.active .s-turnaj-bar { width: 55%; }
 
-  /* red top stripe */
   .s-turnaj::before {
     content: '';
     position: absolute;
@@ -3329,7 +3305,7 @@
 
   /* ═══════════════════════════════════════════
      SLIDE 11 — THANK YOU
-  ═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
   #s11 {
     background: #000;
   }
@@ -3398,9 +3374,7 @@
     margin-top: 3px;
   }
 
-  /* ═══════════════════════════════════════════
-     FULLSCREEN BUTTON
-  ═══════════════════════════════════════════ */
+  /* Fullscreen button */
   #fs-btn {
     position: fixed;
     top: 14px; right: 14px;
@@ -3428,9 +3402,7 @@
   :fullscreen #fs-btn .fs-enter { display: none; }
   :fullscreen #fs-btn .fs-exit  { display: block; }
 
-  /* ═══════════════════════════════════════════
-     GLOBAL NOISE TEXTURE OVERLAY
-  ═══════════════════════════════════════════ */
+  /* Noise texture */
   #noise {
     position: fixed;
     inset: 0;
@@ -3441,15 +3413,11 @@
   }
   #noise svg { width: 100%; height: 100%; }
 
-  /* ═══════════════════════════════════════════
-     DECORATIVE BACKGROUND MOTIF LAYER
-     Injected as first child of content slides (pointer-events:none, z-index:0).
-     Sits behind content; very low opacity so it never hurts readability.
-  ═══════════════════════════════════════════ */
+  /* Decorative motifs */
   .deco-layer {
     position: absolute;
     inset: 0;
-    z-index: 0;          /* JS sets it to -1 inline; kept here as fallback */
+    z-index: 0;
     pointer-events: none;
     overflow: hidden;
   }
@@ -3480,7 +3448,6 @@
     background: currentColor;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
-  /* light-background slides: faint dotted grid */
   .deco-layer.deco-light::before {
     content: '';
     position: absolute;
@@ -3489,7 +3456,6 @@
     background-size: 30px 30px;
     animation: decoGridDrift 26s linear infinite;
   }
-  /* dark-background slides: faint dot field */
   .deco-layer.deco-dark::before {
     content: '';
     position: absolute;
@@ -3517,7 +3483,6 @@
     from { transform: rotate(360deg); }
     to   { transform: rotate(0deg); }
   }
-  /* title-slide enhancements: rotating rings + radial pulse */
   @keyframes s1RingSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
   @keyframes s1Pulse {
     0%, 100% { transform: scale(1);   opacity: 0.30; }
@@ -3552,7 +3517,6 @@
 
 <div id="progress"></div>
 
-<!-- Global noise texture overlay -->
 <div id="noise" aria-hidden="true">
   <svg xmlns="http://www.w3.org/2000/svg">
     <filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
@@ -3560,7 +3524,6 @@
   </svg>
 </div>
 
-<!-- Fullscreen toggle -->
 <button id="fs-btn" aria-label="Prepnúť celú obrazovku" title="Celá obrazovka (F)">
   <svg class="fs-enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>
@@ -3572,10 +3535,8 @@
 
 <div id="deck">
 
-  <!-- ── SLIDE 1: TITLE ── -->
   <div class="slide active" id="s1">
 
-    <!-- RED FIELD (70%) — all text lives here -->
     <div class="s1-left">
       <div class="swim-circles">
         <div class="swim-circle outline" style="width:90px;height:90px;left:8%;bottom:12%;animation-duration:7s;animation-delay:0s;"></div>
@@ -3611,16 +3572,15 @@
       </div>
     </div>
 
-    <!-- WHITE FIELD (30%) — logos -->
     <div class="s1-right">
       <div class="s1-right-top">
         <div class="s1-logo-block anim-scale-in d2">
-          <img src="assets/logo-jlf-t.png" class="s1-logo-img" alt="JLF">
+          <img src="logo-jlf.png" class="s1-logo-img" alt="JLF">
           <div class="s1-logo-label">Jesseniova lekárska fakulta</div>
         </div>
         <div class="s1-logo-divider"></div>
         <div class="s1-logo-block anim-scale-in d3">
-          <img src="assets/logo-morphology-t.png" class="s1-logo-img" alt="Morphology">
+          <img src="logo-morphology.png" class="s1-logo-img" alt="Morphology">
           <div class="s1-logo-label">Morphology</div>
         </div>
       </div>
@@ -3635,11 +3595,9 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 2: VÝCHODISKÁ ── -->
   <div class="slide" id="s2" style="flex-direction:column;">
     <div class="s2-pulse-wrap">
       <svg class="s2-starburst" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Thin radiating bars from center, varying lengths -->
         <rect x="98" y="20"  width="4" height="72" rx="2" fill="#DF0A1A" opacity="0.85" transform="rotate(0   100 100)"/>
         <rect x="98" y="20"  width="4" height="55" rx="2" fill="#1a1a1a" opacity="0.18" transform="rotate(38  100 100)"/>
         <rect x="98" y="28"  width="4" height="60" rx="2" fill="#1a1a1a" opacity="0.13" transform="rotate(68  100 100)"/>
@@ -3651,7 +3609,6 @@
         <rect x="98" y="20"  width="4" height="70" rx="2" fill="#1a1a1a" opacity="0.15" transform="rotate(260 100 100)"/>
         <rect x="98" y="28"  width="4" height="52" rx="2" fill="#DF0A1A" opacity="0.18" transform="rotate(295 100 100)"/>
         <rect x="98" y="22"  width="4" height="62" rx="2" fill="#1a1a1a" opacity="0.12" transform="rotate(328 100 100)"/>
-        <!-- small center dot -->
         <circle cx="100" cy="100" r="5" fill="#DF0A1A" opacity="0.7"/>
       </svg>
     </div>
@@ -3670,8 +3627,6 @@
     </div>
 
     <div class="s2-grid">
-
-      <!-- CARD I — colored pills -->
       <div class="s2-card s2-card--pills" id="s2-card-1">
         <div class="s2-card-top">
           <div class="s2-icon">
@@ -3690,7 +3645,6 @@
         </div>
       </div>
 
-      <!-- CARD II — timeline -->
       <div class="s2-card s2-card--timeline" id="s2-card-2">
         <div class="s2-card-top">
           <div class="s2-icon">
@@ -3718,7 +3672,6 @@
         </div>
       </div>
 
-      <!-- CARD III — dark inverted -->
       <div class="s2-card s2-card--dark" id="s2-card-3">
         <div class="s2-card-top">
           <div class="s2-icon">
@@ -3736,7 +3689,6 @@
           <div class="s2-dark-item"><div class="s2-dark-num">3</div><div class="s2-dark-text">Efektivitu technológií</div></div>
         </div>
       </div>
-
     </div>
 
     <div class="slide-footer">
@@ -3745,9 +3697,8 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 3: ANATOMAGE TABLE ── -->
   <div class="slide sgif" id="s-anatomage">
-    <img class="sgif-bg" src="assets/slide3_img0.gif" alt="Anatomage Table">
+    <img class="sgif-bg" src="slide3_img0.gif" alt="Anatomage Table">
     <div class="sgif-overlay"></div>
     <div class="sgif-content">
       <div class="sgif-num">METÓDA 01</div>
@@ -3760,9 +3711,8 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 4: ANATOMICKÉ MODELY ── -->
   <div class="slide sgif" id="s-models">
-    <img class="sgif-bg" src="assets/slide4_img1.gif" alt="Anatomické modely">
+    <img class="sgif-bg" src="slide4_img1.gif" alt="Anatomické modely">
     <div class="sgif-overlay"></div>
     <div class="sgif-content">
       <div class="sgif-num">METÓDA 02</div>
@@ -3775,7 +3725,6 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 5: POPULATION ── -->
   <div class="slide" id="s3">
     <div class="s3-left">
       <div class="swim-circles">
@@ -3850,7 +3799,6 @@
   </div>
 
 
-  <!-- ── SLIDE (s5): METHODOLOGY ── -->
   <div class="slide" id="s5">
     <div class="s5-header anim-fade-up d1">
       <div class="s5-main-title">AKO SME MERALI <span class="red">UČENIE?</span></div>
@@ -3858,8 +3806,6 @@
     </div>
 
     <div class="s5-phases">
-
-      <!-- Phase 01 : red -->
       <div class="s5-phase" id="s5-phase-1">
         <div class="s5-phase-num">01</div>
         <div class="s5-phase-divider-v"></div>
@@ -3884,7 +3830,6 @@
         </div>
       </div>
 
-      <!-- Phase 02 : black -->
       <div class="s5-phase" id="s5-phase-2">
         <div class="s5-phase-num">02</div>
         <div class="s5-phase-divider-v"></div>
@@ -3934,7 +3879,6 @@
         </div>
       </div>
 
-      <!-- Phase 03 : grey -->
       <div class="s5-phase" id="s5-phase-3">
         <div class="s5-phase-num">03</div>
         <div class="s5-phase-divider-v"></div>
@@ -3970,7 +3914,6 @@
         </div>
       </div>
 
-      <!-- Phase 04 : red -->
       <div class="s5-phase" id="s5-phase-4">
         <div class="s5-phase-num">04</div>
         <div class="s5-phase-divider-v"></div>
@@ -3998,7 +3941,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="s5-bottom-row">
@@ -4009,12 +3951,11 @@
       <div class="s5-stat-divider"></div>
       <div class="s5-stat-box">
         <span class="s5-stat-label">Spoľahlivosť dotazníku</span>
-        <span class="s5-stat-value">Cronbachova alfa (0.70.0.80)</span>
+        <span class="s5-stat-value">Cronbachova alfa (0.70 - 0.80)</span>
       </div>
     </div>
   </div>
 
-  <!-- ── SLIDE 6: RESULTS TEST ── -->
   <div class="slide" id="s6">
     <div class="s6-ring" aria-hidden="true"></div>
     <div class="s6-dots" aria-hidden="true"></div>
@@ -4025,8 +3966,6 @@
     </div>
 
     <div class="s6-chart-grid">
-
-      <!-- Chart 1: Immediate -->
       <div class="s6-chart" id="s6-chart-1">
         <div class="s6-chart-head">
           <div class="s6-chart-title">Okamžitý test</div>
@@ -4068,7 +4007,6 @@
         </div>
       </div>
 
-      <!-- Chart 2: Retention -->
       <div class="s6-chart win" id="s6-chart-2">
         <div class="s6-chart-head">
           <div class="s6-chart-title">Retenčný test</div>
@@ -4109,7 +4047,6 @@
           <div class="s6-interp">Trend v prospech <strong>hybridnej skupiny</strong> po 1 týždni.</div>
         </div>
       </div>
-
     </div>
 
     <div class="slide-footer">
@@ -4118,7 +4055,6 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 7: QUESTIONNAIRE ── -->
   <div class="slide" id="s7">
     <div class="s7-ring" aria-hidden="true"></div>
     <div class="s7-dots" aria-hidden="true"></div>
@@ -4144,7 +4080,6 @@
       </div>
     </div>
     <div class="s7-grid">
-
       <div class="s7-scale" id="s7-scale-1">
         <div class="s7-scale-head">
           <div class="s7-scale-name">VNÍMANÁ EFEKTIVITA</div>
@@ -4196,7 +4131,6 @@
           <div class="s7-score-row winner"><span class="s7-score-group">Skupina III</span><div class="s7-bar-track"><div class="s7-bar-fill" style="--w:92.6%"></div></div><span class="s7-score-num">23.14</span></div>
         </div>
       </div>
-
     </div>
 
     <div class="s7-bottom">
@@ -4212,7 +4146,6 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 8: STUDENTS WANT TECH ── -->
   <div class="slide" id="s8">
     <div class="s8-left">
       <div class="s8-liquid"></div>
@@ -4253,7 +4186,6 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 9: ZÁVER ── -->
   <div class="slide" id="s9">
     <div class="s9-ring" aria-hidden="true"></div>
     <div class="s9-ring-inner" aria-hidden="true"></div>
@@ -4315,15 +4247,14 @@
     <div class="s9-rec-box anim-fade-up d2">
       <span class="s9-rec-pill">Odporúčanie</span>
       <div class="s9-rec-text">
-        Hybridný prístup spájajúci virtuálnu pitvu a fyzické modely prináša <strong>benefit do výučby</strong>. Vysoký záujem študentov a priaznivé výsledky hybridnej skupiny odporúčajú <strong>využitie moderných technológií</strong> v študovaní anatómie.
+        Hybridný prístup spájajúci virtuálnu pitvu a fyzické modely prináša <strong>benefit do výučby</strong>. Vysoký záujem študentov and priaznivé výsledky hybridnej skupiny odporúčajú <strong>využitie moderných technológií</strong> v študovaní anatómie.
       </div>
     </div>
   </div>
 
-  <!-- ── SLIDE 10: CTA ── -->
   <div class="slide" id="s10">
     <div class="s10-img-bg">
-      <img src="assets/slide10_img2.jpg" alt="Študenti pri stole Anatomage">
+      <img src="slide10_img2.jpg" alt="Študenti pri stole Anatomage">
     </div>
     <div class="s10-overlay"></div>
     <div class="s10-ring" aria-hidden="true"></div>
@@ -4337,10 +4268,9 @@
     </div>
   </div>
 
-  <!-- ── SLIDE t1: ANATOMICKÝ TURNAJ 1. ROČNÍK ── -->
   <div class="slide s-turnaj" id="s-turnaj1">
     <div class="s-turnaj-bg">
-      <img src="assets/turnaj1.jpg" alt="Anatomický turnaj 1. ročník">
+      <img src="turnaj1.jpg" alt="Anatomický turnaj 1. ročník">
     </div>
     <div class="s-turnaj-overlay"></div>
     <div class="s-turnaj-bar" aria-hidden="true"></div>
@@ -4352,10 +4282,9 @@
     </div>
   </div>
 
-  <!-- ── SLIDE t2: ANATOMICKÝ TURNAJ 2. ROČNÍK ── -->
   <div class="slide s-turnaj" id="s-turnaj2">
     <div class="s-turnaj-bg">
-      <img src="assets/turnaj2.jpg" alt="Anatomický turnaj 2. ročník">
+      <img src="turnaj2.jpg" alt="Anatomický turnaj 2. ročník">
     </div>
     <div class="s-turnaj-overlay"></div>
     <div class="s-turnaj-bar" aria-hidden="true"></div>
@@ -4367,9 +4296,8 @@
     </div>
   </div>
 
-  <!-- ── SLIDE 11: THANK YOU ── -->
   <div class="slide" id="s11">
-    <img src="assets/slide13_img5.jpg" class="s11-bg" alt="">
+    <img src="slide13_img5.jpg" class="s11-bg" alt="">
     <div class="s11-overlay"></div>
     <div class="s11-content">
       <div class="s11-thank anim-fade-up d1">ĎAKUJEM<br>ZA POZORNOSŤ</div>
@@ -4380,10 +4308,7 @@
     </div>
   </div>
 
-</div><!-- /deck -->
-
-<!-- Navigation -->
-<div id="nav">
+</div><div id="nav">
   <button id="btn-prev" aria-label="Previous" onclick="changeSlide(-1)">&#8592;</button>
   <span id="slide-counter">1 / 11</span>
   <button id="btn-next" aria-label="Next" onclick="changeSlide(1)">&#8594;</button>
@@ -4396,48 +4321,29 @@
   const total = slides.length;
   let current = 0;
   let transitioning = false;
-  let pendingDir = 0;   // queued navigation direction while a transition is running
+  let pendingDir = 0;
 
-  // ═══ Per-slide-PAIR cinematic transitions ═══
-  // Keyed by the LOWER index of the pair (the slide you leave when going
-  // forward). `o` = exit class for the outgoing slide, `i` = enter class for
-  // the incoming slide. `bwd` mirrors `fwd` logically for backward navigation.
-  // Every duration is >= 750ms. Pair index >= 9 falls back to PUSH.
   const PAIR_TX = [
-    // 0: slide 1<->2  Slow zoom out
     { dur: 900,  ease: 'ease',                        fwd: { o: 'x-scaleup',    i: 'n-small'  }, bwd: { o: 'x-scaledown',  i: 'n-up108'  } },
-    // 1: slide 2<->3  Slide up / down
     { dur: 800,  ease: 'cubic-bezier(0.76,0,0.24,1)', fwd: { o: 'x-up',         i: 'n-bottom' }, bwd: { o: 'x-down',       i: 'n-top'    } },
-    // 2: slide 3<->4  Push left / right
     { dur: 850,  ease: 'cubic-bezier(0.87,0,0.13,1)', fwd: { o: 'x-left',       i: 'n-right'  }, bwd: { o: 'x-right',      i: 'n-left'   } },
-    // 3: slide 4<->5  Diagonal
     { dur: 750,  ease: 'ease-in-out',                 fwd: { o: 'x-diag-br',    i: 'n-tl'     }, bwd: { o: 'x-diag-tl',    i: 'n-br'     } },
-    // 4: slide 5<->6  Zoom in
     { dur: 900,  ease: 'cubic-bezier(0.65,0,0.35,1)', fwd: { o: 'x-scaledown',  i: 'n-big'    }, bwd: { o: 'x-scaleup112', i: 'n-small88'} },
-    // 5: slide 6<->7  Vertical reveal (down / up)
     { dur: 800,  ease: 'cubic-bezier(0.76,0,0.24,1)', fwd: { o: 'x-down',       i: 'n-top'    }, bwd: { o: 'x-up',         i: 'n-bottom' } },
-    // 6: slide 7<->8  Morph crossfade with blur peak (symmetric)
     { dur: 1000, ease: 'ease', morph: true },
-    // 7: slide 8<->9  Slide left / right (slow)
     { dur: 900,  ease: 'cubic-bezier(0.87,0,0.13,1)', fwd: { o: 'x-left',       i: 'n-right'  }, bwd: { o: 'x-right',      i: 'n-left'   } },
-    // 8: slide 9<->10 Zoom out reveal
     { dur: 850,  ease: 'ease',                        fwd: { o: 'x-scaleup11',  i: 'n-fade'   }, bwd: { o: 'x-fade',       i: 'n-up110'  } }
   ];
-  // 9+: slide 10 onward — push (left forward / right backward)
   const PUSH_TX = { dur: 800, ease: 'cubic-bezier(0.76,0,0.24,1)', fwd: { o: 'x-left', i: 'n-right' }, bwd: { o: 'x-right', i: 'n-left' } };
   function pairTxFor(lo) { return lo <= 8 ? PAIR_TX[lo] : PUSH_TX; }
-  // Every state class, for cleanup.
   const ALL_TX = [
     'x-scaleup','x-scaleup11','x-scaleup112','x-scaledown','x-up','x-down','x-left','x-right',
     'x-diag-br','x-diag-tl','x-fade','m-out',
     'n-small','n-small88','n-big','n-up108','n-up110','n-bottom','n-top','n-right','n-left','n-tl','n-br','n-fade','m-in'
   ];
 
-  // Per-slide step config: slideIndex -> total sub-steps
-  // idx 1=s2 cards, 4=population groups, 5=method phases, 6=results charts,
-  // 7=questionnaire scales, 8=tech quotes, 9=záver ranks
   const stepSlides = { 1: 3, 4: 3, 5: 4, 6: 2, 7: 6, 8: 4, 9: 3 };
-  const stepState = {};         // tracks revealed count per slide index
+  const stepState = {};
 
   function getS2Cards() {
     return document.querySelectorAll('#s2 .s2-card');
@@ -4479,7 +4385,6 @@
       c.style.animationDelay = '';
     });
     document.getElementById('s2-step-hint').textContent = '02 / 11';
-    // reset title + cursor + subtitle
     const titleEl = document.getElementById('s2-title');
     const cursor  = document.getElementById('s2-cursor');
     const sub     = document.getElementById('s2-sub');
@@ -4545,7 +4450,6 @@
     return true;
   }
 
-  // ── Slide 6: results charts ──
   function resetS6() {
     stepState[6] = 0;
     [1,2].forEach(n => {
@@ -4568,7 +4472,6 @@
     return true;
   }
 
-  // ── Slide 8: tech quotes + counter ──
   let s8CountTimer = null;
   function countUpS8() {
     const el = document.getElementById('s8-counter');
@@ -4619,7 +4522,6 @@
     return true;
   }
 
-  // ── Slide 9: záver ranks ──
   function resetS9() {
     stepState[9] = 0;
     [1,2,3].forEach(n => {
@@ -4702,7 +4604,6 @@
     return true;
   }
 
-  // Build dots
   const dotsEl = document.getElementById('dots');
   slides.forEach((_, i) => {
     const d = document.createElement('div');
@@ -4735,14 +4636,12 @@
     if (current === 8) resetS8();
     if (current === 9) resetS9();
 
-    // Reset child entrance-animations on the incoming slide
     next.querySelectorAll('.anim-fade-up,.anim-fade-in,.anim-slide-right,.anim-scale-in').forEach(el => {
       el.style.animation = 'none';
       el.offsetHeight;
       el.style.animation = '';
     });
 
-    // Reset bar fills
     next.querySelectorAll('.bar-fill').forEach(b => {
       b.style.transition = 'none';
       b.style.width = '0';
@@ -4750,22 +4649,19 @@
       b.style.transition = '';
     });
 
-    // Pick the cinematic transition for this slide pair + direction.
     const lo = Math.min(current, idx);
     const tx = pairTxFor(lo);
     const dur = tx.dur;
 
-    // Clear any leftover transition state on both slides.
     prev.classList.remove(...ALL_TX);
     next.classList.remove(...ALL_TX);
     prev.style.transition = ''; prev.style.transform = ''; prev.style.opacity = ''; prev.style.filter = '';
     next.style.transition = ''; next.style.transform = ''; next.style.opacity = ''; next.style.filter = '';
 
     if (tx.morph) {
-      // Symmetric crossfade with a mid blur-peak, driven by @keyframes.
       prev.classList.remove('active');
       next.classList.add('active');
-      void prev.offsetWidth; void next.offsetWidth;   // ensure animations restart
+      void prev.offsetWidth; void next.offsetWidth;
       prev.classList.add('m-out');
       next.classList.add('m-in');
     } else {
@@ -4774,15 +4670,13 @@
                     ', opacity ' + dur + 'ms ' + tx.ease +
                     ', filter '  + dur + 'ms ' + tx.ease;
 
-      // Outgoing: animate from neutral (active) to its exit state.
       prev.style.transition = trans;
       prev.classList.remove('active');
       prev.classList.add(sel.o);
 
-      // Incoming: snap to enter start-state (no transition), then animate to neutral.
       next.style.transition = 'none';
       next.classList.add(sel.i);
-      void next.offsetWidth;                 // commit the start state
+      void next.offsetWidth;
       next.style.transition = trans;
       next.classList.add('active');
       next.classList.remove(sel.i);
@@ -4794,14 +4688,12 @@
     if (idx === 1) setTimeout(typewriterSlide2, Math.min(450, dur * 0.5));
     if (idx === 8) setTimeout(countUpS8, Math.min(480, dur * 0.5));
 
-    // Lock matches this pair's actual duration.
     setTimeout(() => {
       prev.classList.remove('active', ...ALL_TX);
       prev.style.transition = ''; prev.style.transform = ''; prev.style.opacity = ''; prev.style.filter = '';
       next.classList.remove(...ALL_TX);
       next.style.transition = ''; next.style.transform = ''; next.style.opacity = ''; next.style.filter = '';
       transitioning = false;
-      // Execute any navigation the user queued mid-transition.
       if (pendingDir !== 0) {
         const d = pendingDir;
         pendingDir = 0;
@@ -4811,8 +4703,6 @@
   }
 
   function changeSlide(dir) {
-    // Queue input received during a transition; it fires the moment the
-    // current transition ends (see goTo cleanup) instead of being discarded.
     if (transitioning) { pendingDir = dir; return; }
     if (dir === 1 && current === 1) {
       if ((stepState[1] || 0) < stepSlides[1]) { revealNextCard(); return; }
@@ -4860,7 +4750,6 @@
     goTo(next);
   }
 
-  // Fullscreen toggle (keyboard 'F' + on-screen button)
   function toggleFullscreen() {
     const el = document.documentElement;
     if (!document.fullscreenElement) {
@@ -4872,7 +4761,6 @@
   const fsBtn = document.getElementById('fs-btn');
   if (fsBtn) fsBtn.addEventListener('click', toggleFullscreen);
 
-  // Keyboard
   document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ')  { e.preventDefault(); changeSlide(1); }
     if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                      { e.preventDefault(); changeSlide(-1); }
@@ -4881,7 +4769,6 @@
     if (e.key === 'End')  goTo(total - 1);
   });
 
-  // Touch/swipe — 80px threshold suits large touchscreens
   let touchStartX = 0;
   document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
   document.addEventListener('touchend', e => {
@@ -4889,12 +4776,7 @@
     if (Math.abs(dx) > 80) changeSlide(dx > 0 ? 1 : -1);
   });
 
-  /* ═══ Decorative animated backgrounds (low-opacity, behind content) ═══
-     A distinct shape motif is injected per content slide. The layer sits at
-     z-index:-1 so it always paints behind text, never affecting readability. */
   (function buildDecor() {
-    // Each entry: slide id, light/dark variant, and a list of drifting shapes.
-    // s = size(px), x/y = position(%), t = type, d = anim duration(s), dl = delay(s)
     const MOTIFS = {
       's2':  { v: 'light', shapes: [
         { t:'ring2', s:240, x:82, y:14, d:30, dl:0 }, { t:'circle', s:150, x:88, y:20, d:26, dl:1 },
@@ -4945,7 +4827,6 @@
       slide.insertBefore(layer, slide.firstChild);
     });
 
-    // Title slide (s1): rotating rings + radial pulse on the red field
     const s1Left = document.querySelector('#s1 .s1-left');
     if (s1Left) {
       const frag = document.createDocumentFragment();
